@@ -5,5 +5,9 @@ You should put the required font (SimSun, SimKai) files in the following path
 #+BEGIN_SRC bash
 ~/.TeXmacs/fonts/truetype
 #+END_SRC
-
+After you have placed the font file, run
+#+BEGIN_SRC bash
+texmacs --delete-font-cache
+#+END_SRC
 Do not install Fandol font family since the TeXmacs would fallback cjk font to Fandol first.
+
