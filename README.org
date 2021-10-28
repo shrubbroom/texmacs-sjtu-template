@@ -1,7 +1,7 @@
 * README
 This template *does not* meet the official requirements of academic paper.
 * Font Setup
-You should put the required font (SimSun, SimKai, FangSong\_GB2312,KaiTi\_GB2312) files in the following path
+You should put the required font (SimSun, SimKai, FangSong_GB2312, KaiTi_GB2312, Times New Roman) files in the following path
 #+BEGIN_SRC bash
 ~/.TeXmacs/fonts/truetype
 #+END_SRC
@@ -24,5 +24,5 @@ The document font should be
 
 | en          | Times New Roman |
 | cjk regular | SimSun          |
-| cjk italic  | Kaiti\_Gb2312   |
+| cjk italic  | Kaiti_GB2312    |
 | cjk bold    | SimHei          |
