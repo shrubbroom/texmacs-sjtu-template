@@ -1,7 +1,7 @@
 * README
 This template *does not* meet the official requirements of academic paper.
 * Font Setup
-You should put the required font (SimSun, SimKai) files in the following path
+You should put the required font (SimSun, SimKai, FangSong\_GB2312,KaiTi\_GB2312) files in the following path
 #+BEGIN_SRC bash
 ~/.TeXmacs/fonts/truetype
 #+END_SRC
@@ -9,5 +9,20 @@ After you have placed the font file, run
 #+BEGIN_SRC bash
 texmacs --delete-font-cache
 #+END_SRC
-Do not install Fandol font family since the TeXmacs would fallback cjk font to Fandol first.
+The TeXmacs hardcode its font substitutions. Therefore, you have to modify the ~font-substitution.scm~ by hand.
+This file locates in
+#+BEGIN_SRC bash
+  $TEXMACS_PATH/fonts/font-substitution.scm
+#+END_SRC
+Add the following line to this file
+#+BEGIN_SRC scheme
+((Times\ New\ Roman cjk) (SimSun))
+#+END_SRC
+This will fallback cjk font in Times New Roman to SimSun.
+Other required fallback rules already exist in this file.
+The document font should be
 
+| en          | Times New Roman |
+| cjk regular | SimSun          |
+| cjk italic  | Kaiti\_Gb2312   |
+| cjk bold    | SimHei          |
